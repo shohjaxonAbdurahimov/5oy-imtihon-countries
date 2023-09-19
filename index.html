@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Countries</title>
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper container">
+      <a class="site-logo" href="./index.html">Where in the world? </a>
+      <div class="dark-light">
+        <button id="dark-btn" class="style-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+            <path fill="#fff" fill-rule="evenodd" stroke="#111517" stroke-width="1.25"
+              d="M13.553 13.815c-3.884 0-7.034-2.887-7.034-6.447 0-1.343.448-2.586 1.212-3.618-3.04.945-5.231 3.581-5.231 6.688 0 3.9 3.45 7.062 7.704 7.062 3.389 0 6.266-2.007 7.296-4.796a7.458 7.458 0 0 1-3.947 1.111Z"
+              clip-rule="evenodd" />
+          </svg>
+          Dark Mode
+        </button>
+        <button id="light-btn" class="hidden style-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+            <path fill="#fff" fill-rule="evenodd"
+              d="M13.553 13.815c-3.884 0-7.034-2.887-7.034-6.447 0-1.343.448-2.586 1.212-3.618-3.04.945-5.231 3.581-5.231 6.688 0 3.9 3.45 7.062 7.704 7.062 3.389 0 6.266-2.007 7.296-4.796a7.458 7.458 0 0 1-3.947 1.111Z"
+              clip-rule="evenodd" />
+          </svg>
+          Dark Mode
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="form-wrapper">
+        <form id="form" class="form">
+          <label for="form__input">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+                <path fill-rule="evenodd"
+                  d="M12.5 11h-.8l-.3-.3c1-1.1 1.6-2.6 1.6-4.2C13 2.9 10.1 0 6.5 0S0 2.9 0 6.5 2.9 13 6.5 13c1.6 0 3.1-.6 4.2-1.6l.3.3v.8l5 5 1.5-1.5-5-5Zm-6 0C4 11 2 9 2 6.5S4 2 6.5 2 11 4 11 6.5 9 11 6.5 11Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <input class="form__input" type="search" name="user-search" id="form__input"
+              placeholder="Search for a country…" aria-label="search" autocomplete="off" />
+          </label>
+        </form>
+
+        <div class="sort">
+          <button id="sortBtn" class="filter-wrapper">
+            Filter by Region
+            <div class="toggle-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none">
+                <path fill="#000" fill-rule="evenodd" d="M9.45 3.45 6 6.9 2.55 3.45 1.5 4.5 6 9l4.5-4.5-1.05-1.05Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+          </button>
+          <div id="sort-list" class="sort-list__wrap hidden">
+            <ul class="sort-list">
+              <li class="sort-item">
+                <p>Africa</p>
+              </li>
+              <li class="sort-item">
+                <p>Americas</p>
+              </li>
+              <li class="sort-item">
+                <p>Asia</p>
+              </li>
+              <li class="sort-item">
+                <p>Europe</p>
+              </li>
+              <li class="sort-item">
+                <p>Oceania</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <ul class="site-list" id="siteList"></ul>
+    </div>
+  </main>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="loader"></div>
+  </div>
+
+
+
+
+
+
+  <!-- JAVASCRIPT -->
+  <script type="module" src="./js/mode.js"></script>
+  <script type="module" src="./js/request.js"></script>
+  <script type="module" src="./js/search.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
